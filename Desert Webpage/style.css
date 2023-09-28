@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto' , sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+nav ul li a:hover{
+    color: #ff9600;
+    transition: .5s;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: #fff;
+    font-size: 100px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    transition: 0.9s ease;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1.3s;
+}
+button:hover{
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    /* background: #ff9600; */
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: all 3s ease;
+    opacity: 0; 
+    animation: slideLeft 1s ease forwards;   
+    animation-delay: 1.3s;   
+}
+.card a{
+    text-decoration: none;
+}
+.card:hover{
+    background: transparent;
+    border: 1px solid #fff;
+}
+.card-1{
+    background: url(pic-1.png);
+}
+.card-2{
+    background-image: url(pic-2.png);
+}
+.card-3{
+    background-image: url(pic-3.png);
+}
+.card-4{
+    background-image: url(pic-4.png);
+}
+h5{
+    color: #fff;
+    text-shadow: 0 0 15px #999;
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
+}
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
